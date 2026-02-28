@@ -309,3 +309,23 @@ body.dark .contact-text {
 .contact-info p {
   margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .resume-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
