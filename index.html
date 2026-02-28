@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mustafa Samplewala | AI & ML Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="themeToggle">🌙</button>
+
+<nav class="navbar">
+  <div class="logo">M</div>
+  <ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#publication">Publication</a></li>
+  <li><a href="#timeline">Journey</a></li>
+  <li><a href="#certificates">Certificates</a></li>
+
+  <!-- Highlighted Resume Button -->
+  <li>
+    <a href="assets/resume.pdf" download class="resume-btn">
+      Download Resume
+    </a>
+  </li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero reveal" id="home">
+    <div class="hero-content">
+        <h1>Hello, I’m <span>Mustafa Samplewala</span></h1>
+
+        <!-- About Me -->
+        <p class="about-text">
+            I am a final-year B.Tech student specializing in Artificial Intelligence and
+            Machine Learning at Sandip University. My interests include computer vision,
+            deep learning, and building AI systems that solve real-world problems.
+        </p>
+
+        <!-- Animated Counters -->
+        <div class="stats">
+            <div>
+            <h3 class="counter" data-target="10">0</h3>
+            <span>ML Projects</span>
+            </div>
+            <div>
+            <h3 class="counter" data-target="2">0</h3>
+            <span>Internships</span>
+            </div>
+            <div>
+            <h3 class="counter" data-target="1">0</h3>
+            <span>Research Paper</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-image">
+    <img src="assets/profile.jpg" alt="Mustafa Samplewala">
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="glass-section reveal" id="projects">
+  <h2 class="section-title">Projects</h2>
+
+  <!-- FINAL YEAR PROJECT (FEATURED) -->
+  <div class="featured-project">
+    <h3>Smart Talkative Camera – Final Year Project</h3>
+    <p>
+      A deep learning–based interactive visual assistance system that performs
+      real-time object detection using CNN/YOLO models and provides
+      voice-based feedback through text-to-speech technology.
+      Designed primarily for assistive technologies and smart environments.
+    </p>
+
+    <ul>
+      <li>Real-time object detection</li>
+      <li>Deep learning (CNN / YOLO)</li>
+      <li>Text-to-Speech interaction</li>
+      <li>Assistive AI application</li>
+    </ul>
+
+    <span>
+      Python · Computer Vision · Deep Learning · YOLO · OpenCV · TTS
+    </span>
+
+    <div class="project-links">
+      <a class="btn" target="_blank"
+         href="https://isjem.com/download/smart-talkative-camera-a-deep-learning-based-interactive-visual-assistance-system/">
+        📄 View Published Paper
+      </a>
+    </div>
+  </div>
+
+  <!-- OTHER PROJECTS (AUTO FROM GITHUB) -->
+  <h3 class="sub-title">Other Projects</h3>
+  <div class="card-grid" id="projectsContainer"></div>
+</section>
+
+<!-- PUBLICATION -->
+<section class="glass-section reveal" id="publication">
+  <h2 class="section-title">Publication</h2>
+  <p class="citation">
+    Samplewala, M. et al. (2026). <i>Smart Talkative Camera: A Deep Learning Based Interactive
+    Visual Assistance System.</i> ISJEM, 5(02).
+  </p>
+  <a class="btn" target="_blank"
+     href="https://isjem.com/download/smart-talkative-camera-a-deep-learning-based-interactive-visual-assistance-system/">
+    View Paper
+  </a>
+</section>
+
+<!-- TIMELINE -->
+<section class="glass-section reveal" id="timeline">
+  <h2 class="section-title">Education & Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item"><h3>B.Tech AI & ML</h3><span>Sandip University (2022–2026)</span></div>
+    <div class="timeline-item"><h3>ML Intern</h3><span>Prodigy InfoTech (2024)</span></div>
+    <div class="timeline-item"><h3>AI & ML Intern</h3><span>Elevate Labs (2025)</span></div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="glass-section reveal" id="certificates">
+  <h2 class="section-title">Certificates</h2>
+  <div class="cert-grid">
+    <img src="assets/certificates/prodigy.jpg" onclick="openModal(this.src)">
+    <img src="assets/certificates/elevate.jpg" onclick="openModal(this.src)">
+    <img src="assets/certificates/research-paper.jpg" onclick="openModal(this.src)">
+  </div>
+</section>
+
+<div id="certModal" class="modal">
+  <span class="close" onclick="closeModal()">×</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<!-- Contact -->
+<section class="glass-section reveal" id="contact">
+  <h2 class="section-title">Contact</h2>
+
+  <p class="contact-text">
+    If you’d like to connect, collaborate, or just say hi, feel free to reach out!
+  </p>
+
+  <div class="contact-info">
+    <p>
+      📧 Email:
+      <a href="mailto:msample5253@gmail.com">
+        msample5253@gmail.com
+      </a>
+    </p>
+
+    <p>
+      💼 LinkedIn:
+      <a href="https://www.linkedin.com/in/mustafa-samplewala-13077528a" target="_blank">
+        linkedin.com/in/mustafa-samplewala
+      </a>
+    </p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
