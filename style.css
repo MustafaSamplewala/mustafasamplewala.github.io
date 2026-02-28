@@ -329,3 +329,27 @@ body.dark .contact-text {
     font-size: 14px;
   }
 }
+
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .about-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: auto;
+    margin-top: 30px;
+  }
+}
