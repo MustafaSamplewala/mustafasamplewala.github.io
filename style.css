@@ -353,3 +353,39 @@ body.dark .contact-text {
     margin-top: 30px;
   }
 }
+
+@media (max-width: 768px) {
+
+  .stats {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .stats h3 {
+    font-size: 26px;
+  }
+
+  .stats span {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item h3 {
+    font-size: 16px;
+  }
+
+  .timeline-item span {
+    font-size: 13px;
+  }
+}
