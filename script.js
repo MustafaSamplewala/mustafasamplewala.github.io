@@ -82,3 +82,36 @@ fetch("https://api.github.com/users/MustafaSamplewala/repos")
         `;
       });
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+  const overlay = document.getElementById("navOverlay");
+
+  if (!hamburger || !navLinks || !overlay) {
+    console.error("Hamburger menu elements not found");
+    return;
+  }
+
+  function openMenu() {
+    navLinks.classList.add("active");
+    overlay.style.display = "block";
+  }
+
+  function closeMenu() {
+    navLinks.classList.remove("active");
+    overlay.style.display = "none";
+  }
+
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.contains("active") ? closeMenu() : openMenu();
+  });
+
+  document.querySelectorAll("#nav-links a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+});
