@@ -452,7 +452,7 @@ body.dark .contact-text {
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
-  z-index: 8;
+  z-index: 30;
 }
 
 .navbar {
@@ -460,6 +460,12 @@ body.dark .contact-text {
   z-index: 10;
 }
 
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 50;        /* ✅ higher than navbar & overlay */
+}
 
 
 
