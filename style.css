@@ -414,33 +414,36 @@ body.dark .contact-text {
 
   .navbar {
     position: relative;
+    z-index: 20;
   }
 
   .navbar ul {
-    display: flex;                 /* ✅ MUST be flex */
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
+    position: fixed;              /* 🔥 key change */
+    top: 0;                       /* 🔥 menu starts from top */
     left: 0;
     width: 100%;
     background: var(--glass);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 20px;
-    gap: 15px;
+    backdrop-filter: blur(18px);
+    border-radius: 0 0 20px 20px;
+    padding: 90px 20px 20px;      /* space for navbar & toggle */
+    gap: 18px;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
 
     /* Slide-down animation */
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-20px);
     transition: all 0.35s ease;
-    z-index: 20;
+
+    z-index: 60;
   }
 
   .navbar ul.active {
-    max-height: 500px;
+    max-height: 100vh;
     opacity: 1;
     transform: translateY(0);
   }
@@ -453,7 +456,7 @@ body.dark .contact-text {
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
-  z-index: 8;         /* below toggle */
+  z-index: 40;         /* below toggle */
 }
 
 /* Navbar must be above overlay */
@@ -494,5 +497,11 @@ body.dark .contact-text {
   }
 }
 
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;   /* always above menu */
+}
 
 
