@@ -488,4 +488,8 @@ body.dark .contact-text {
   z-index: 10;
 }
 
+body.menu-open {
+  overflow: hidden; /* prevents background scroll */
+}
+
 
