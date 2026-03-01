@@ -453,7 +453,7 @@ body.dark .contact-text {
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
-  z-index: 50;         /* below toggle */
+  z-index: 30;         /* below toggle */
   pointer-events: auto;
 }
 
@@ -495,10 +495,4 @@ body.dark .contact-text {
   }
 }
 
-#themeToggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 40;        /* highest layer */
-  pointer-events: auto;
-}
+
