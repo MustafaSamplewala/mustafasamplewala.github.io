@@ -453,7 +453,8 @@ body.dark .contact-text {
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
-  z-index: 30;
+  z-index: 40;         /* below toggle */
+  pointer-events: auto;
 }
 
 /* Navbar must be above overlay */
@@ -498,5 +499,6 @@ body.dark .contact-text {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 50;        /* ✅ higher than navbar & overlay */
+  z-index: 100;        /* highest layer */
+  pointer-events: auto;
 }
