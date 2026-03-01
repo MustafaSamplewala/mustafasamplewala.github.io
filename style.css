@@ -452,10 +452,12 @@ body.dark .contact-text {
     overflow-y: auto;
 
     z-index: 20;
+    pointer-events: none;
   }
 
   .navbar ul.active {
     display: flex;              /* 🔥 shows menu on click */
+    pointer-events: auto;
   }
 
   /* Improve tap area */
