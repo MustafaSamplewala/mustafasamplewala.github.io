@@ -83,7 +83,7 @@ fetch("https://api.github.com/users/MustafaSamplewala/repos")
       });
   });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("nav-links");
@@ -97,21 +97,32 @@ document.addEventListener("DOMContentLoaded", function () {
   function openMenu() {
     navLinks.classList.add("active");
     overlay.style.display = "block";
+    document.body.classList.add("menu-open"); // lock background
   }
 
   function closeMenu() {
     navLinks.classList.remove("active");
     overlay.style.display = "none";
+    document.body.classList.remove("menu-open");
   }
 
-  hamburger.addEventListener("click", function () {
+  // Toggle menu
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation(); // 🔥 prevents click-through
     navLinks.classList.contains("active") ? closeMenu() : openMenu();
   });
 
-  document.querySelectorAll("#nav-links a").forEach(link => {
-    link.addEventListener("click", closeMenu);
+  // Close menu when clicking a nav link
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
   });
 
-  overlay.addEventListener("click", closeMenu);
+  // Close menu when clicking overlay
+  overlay.addEventListener("click", () => {
+    closeMenu();
+  });
 
 });
+
