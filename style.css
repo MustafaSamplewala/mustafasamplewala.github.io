@@ -389,3 +389,114 @@ body.dark .contact-text {
     font-size: 13px;
   }
 }
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .navbar ul {
+    display: flex;                 /* ✅ MUST be flex */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 15px;
+    text-align: center;
+
+    /* Slide-down animation */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.35s ease;
+    z-index: 20;
+  }
+
+  .navbar ul.active {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Overlay background */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  z-index: 30;
+}
+
+/* Navbar must be above overlay */
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+/* Slide-down animation */
+@media (max-width: 768px) {
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 15px;
+    text-align: center;
+
+    /* Animation */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.35s ease;
+  }
+
+  .navbar ul.active {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 50;        /* ✅ higher than navbar & overlay */
+}
