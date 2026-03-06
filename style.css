@@ -492,4 +492,29 @@ body.menu-open {
   overflow: hidden; /* prevents background scroll */
 }
 
+/* Improve project card width on mobile */
+@media (max-width: 768px) {
+
+  .glass-section {
+    width: 95%;           /* reduce outer margin */
+    padding: 40px 20px;
+  }
+
+  .featured-project {
+    width: 100%;          /* full width of container */
+    padding: 30px 20px;
+  }
+
+  .featured-project h3 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .featured-project p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+}
+
 
